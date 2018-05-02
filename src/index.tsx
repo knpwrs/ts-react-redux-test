@@ -13,7 +13,7 @@ const defaultState: State = {
 };
 
 const store = createStore((state: State = defaultState, { type }) => ({
-  counter: state.counter + (type === 'ADD' ? 1 : -1),
+  counter: state.counter + ({ ADD: 1, SUBTRACT: -1}[type] || 0),
 }));
 
 const App = () => (
