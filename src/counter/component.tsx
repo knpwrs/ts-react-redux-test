@@ -11,8 +11,8 @@ export interface DispatchProps {
 
 export default ({ counter, add, subtract }: StateProps & DispatchProps) => (
   <div>
-    <button onClick={add}>Add</button>
+    <button onClick={add}>+</button>
     <div>{counter}</div>
-    <button onClick={subtract}>Subtract</button>
+    <button onClick={subtract}>-</button>
   </div>
 );
