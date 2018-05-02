@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import Component, { StateProps, DispatchProps } from './component';
+import { State } from '../';
 
-const mapStateToProps = (state): StateProps => ({
+const mapStateToProps = (state: State): StateProps => ({
   counter: state.counter,
 });
 
-const actions = {
+const actions: DispatchProps = {
   add() {
     return {
       type: 'ADD',
